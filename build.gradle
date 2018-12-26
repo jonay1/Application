@@ -1,0 +1,38 @@
+plugins {
+	id 'io.franzbecker.gradle-lombok' version '1.14'
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '2.1.1.RELEASE'
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+    jcenter()
+}
+
+dependencies {
+	//Spring核心
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	//插件
+	implementation 'org.projectlombok:lombok'
+	//日志
+	implementation 'ch.qos.logback:logback-classic'
+	
+	//工具类
+	implementation 'org.apache.commons:commons-lang3'
+	implementation 'commons-codec:commons-codec'
+	implementation 'commons-io:commons-io:2.6'
+	implementation 'com.google.code.gson:gson'
+	//数据库
+	implementation 'com.h2database:h2'
+}
+
+bootJar {
+	
+}
