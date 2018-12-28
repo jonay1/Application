@@ -11,3 +11,6 @@
 ## 数据层
 - JPA
 
+
+
+停止应用： curl -X POST http://localhost:8002/admin/shutdown
